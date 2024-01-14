@@ -1,0 +1,143 @@
+
+/* variables de colores */
+:root {
+    --primary: #16180a;
+    --secondary: #c1020f;
+    --light: #fff;
+    --dark: #000;
+    --diabled: #e7e7e7;
+}
+
+body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5rem;
+        font-size: 1.3rem;
+        background: linear-gradient(to right, #d5b603, #303902, #081600de, #030303de);
+        background-size: 500% 100%;
+        animation: background 5s ease-in-out infinite;
+        animation-direction:alternate ;
+      }
+      @keyframes background {
+        0%{
+          background-position-x: 0%;
+        }
+        100%{
+          background-position-x: 100%;
+        }
+      }
+
+
+*:first-letter {
+    text-transform: capitalize;
+}
+
+.roundBorder {
+    border-radius: .3125rem;
+}
+
+.list {
+    display: flexbox;
+    text-align: center  ;
+    justify-content: center;
+    margin: 1.5625rem auto;
+    padding: 1.5625rem;
+    background-color: var(--light);
+    width: 100%;
+    max-width: 21.875rem;
+    margin-top: 8rem;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateLef {
+    display: flex;
+    align-items: center;
+}
+
+#diaNumero {
+    font-size: 3.125rem;
+}
+
+#dia,
+#deseo {
+    text-align: center;
+    letter-spacing: .1875rem;
+    text-transform: uppercase;
+    padding-top: .625rem;
+}
+#deseo{
+    font-weight: bold;
+    justify-content: center;
+    margin-left: .4375rem;
+    font-size: 1.25rem;
+}
+
+#mes,
+#año,
+#dia  {
+    font-weight: bold;
+}
+
+#mes,
+#año {
+    margin-left: .4375rem;
+    font-size: 1.25rem;
+}
+
+form {
+    margin: 1.25rem 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 2.1875rem auto;
+    grid-column-gap: .9375rem;
+}
+
+input {
+    border: none;
+    padding-left: .625rem;
+    background-color: var(--diabled);
+}
+
+input:focus {
+    outline: none;
+}
+
+.addTaskButton,
+.orderButton {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addTaskButton {
+    height: 2.1875rem;
+    border-radius: 50%;
+    font-size: 1.125rem;
+    background-color: var(--diabled);
+}
+
+.orderButton {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.task {
+    background-color: var(--primary);
+    padding: .9375rem;
+    margin-top: .9375rem;
+    font-weight: bold;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.done {
+    background-color: var(--diabled);
+    text-decoration: line-through;
+    color: var(--dark);
+}
